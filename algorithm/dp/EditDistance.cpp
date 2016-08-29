@@ -21,8 +21,8 @@ int min(int a, int b, int c){
 int editDistance(char *x, char *y){
 	int m = strlen(x);
 	int n = strlen(y);
-	if(m==0) return n;
-	if(n==0) return m;
+	if(m==0) return n*insertionCost;
+	if(n==0) return m*deletionCost;
 
 	for(int i=0; i<=m; i++){
 		for(int j=0; j<=n; j++){
