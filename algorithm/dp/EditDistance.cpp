@@ -18,6 +18,7 @@ int min(int a, int b, int c){
 	return min(min(a,b), c); 
 }
 
+// find minimum cost of converting string x to y
 int editDistance(char *x, char *y){
 	int m = strlen(x);
 	int n = strlen(y);
