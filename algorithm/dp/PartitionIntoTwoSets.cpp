@@ -13,8 +13,8 @@ bool isSumSetPossible(int arr[], int n, int sum){
 	// dp[i][j] = true, if sum j can be achived using some of i elements of array.
 	// using 1D array for storing states(optimized)
 	bool dp[sum+1], tmp[sum+1];
-	memset(dp, 0, sizeof(dp)/sizeof(bool));
-	memset(tmp, 0, sizeof(tmp)/sizeof(bool));
+	memset(dp, 0, sizeof(dp));
+	memset(tmp, 0, sizeof(tmp));
 
 	for(int i=0; i<n ;i++){
 		for(int j=1; j<=sum ; j++){
@@ -55,8 +55,8 @@ bool isSumSetPossible2(int arr[], int n, int sum){
 	int baseIndex = -low;
 	printf("%d %d\n", sum, baseIndex);
 	bool dp[size], tmp[size];
-	memset(dp, 0, sizeof(dp)/sizeof(bool));
-	memset(tmp, 0, sizeof(tmp)/sizeof(bool));
+	memset(dp, 0, sizeof(dp));
+	memset(tmp, 0, sizeof(tmp));
 
 	for(int i=0; i<n ;i++){
 		for(int j=low; j<=high ; j++){
